@@ -1,0 +1,20 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="log.css">
+  <title>Welcome</title>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Welcome, <span id="username"></span>!</h1>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const username = urlParams.get('username');
+    document.getElementById('username').textContent = username;
+  </script>
+</body>
+</html>
